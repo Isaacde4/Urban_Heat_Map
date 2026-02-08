@@ -61,3 +61,42 @@ citySelect.addEventListener("change", () => {
     const coords = selectedCity === 'accra' ? [5.6037, -0.1870] : [6.6885, -1.6244];
     map.setView(coords, 12);
 });
+const cityMarkers = {
+    accra: [
+        { coords: [5.6037, -0.1870], name: "Accra Central" },
+        { coords: [5.6000, -0.1800], name: "Korle Bu" }
+    ],
+    kumasi: [
+        { coords: [6.6885, -1.6244], name: "Kumasi Central" },
+        { coords: [6.6900, -1.6200], name: "Kwame Nkrumah University" }
+    ]
+};
+
+// Add markers when city changes
+function addMarkers(city) {
+    // Remove existing markers
+    if (window.currentMarkers) {
+        window.currentMarkers.forEach(m => map.removeLayer(m));
+    }
+
+    window.currentMarkers = cityMarkers[city].map(loc => {
+        return L.marker(loc.coords).addTo(map)
+                 .bindPopup(loc.name);
+    });
+}
+
+// Call addMarkers when city changes
+citySelect.addEventListener("change", () => {
+    const selectedCity = citySelect.value;
+
+    heat.remove();
+    heat = L.heatLayer(cityData[selectedCity], { radius: 25, blur: 15, maxZoom: 17, gradient: {0.2:'blue',0.4:'lime',0.6:'orange',0.8:'red'} }).addTo(map);
+
+    const coords = selectedCity === 'accra' ? [5.6037, -0.1870] : [6.6885, -1.6244];
+    map.setView(coords, 12);
+
+    addMarkers(selectedCity);
+});
+
+// Initial load
+addMarkers('accra');
