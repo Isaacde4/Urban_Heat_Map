@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Heat Map - Ghana</title>
+
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Leaflet Heatmap Plugin -->
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Urban Heat Map</h1>
+    <p>Select a city to view temperature hotspots</p>
+
+    <!-- City Selector -->
+    <select id="citySelect">
+        <option value="accra">Accra</option>
+        <option value="kumasi">Kumasi</option>
+    </select>
+
+    <!-- Map Container -->
+    <div id="map" style="height: 500px; margin-top: 20px;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
