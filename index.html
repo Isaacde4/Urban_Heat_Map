@@ -10,22 +10,35 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Urban Heat Map</h1>
-    <p>Select a city to view real-time temperature hotspots</p>
+    <h1>Urban Heat Map - Ghana</h1>
+    <p>Select a city to view temperature hotspots.</p>
 
     <!-- City Selector -->
     <select id="citySelect">
       <option value="accra">Accra</option>
       <option value="kumasi">Kumasi</option>
+      <option value="tema">Tema</option>
+      <option value="takoradi">Takoradi</option>
+      <option value="cape_coast">Cape Coast</option>
+      <option value="tamale">Tamale</option>
+      <option value="bolgatanga">Bolgatanga</option>
+      <option value="sunyani">Sunyani</option>
+      <option value="techiman">Techiman</option>
+      <option value="ho">Ho</option>
     </select>
 
     <!-- Map Container -->
     <div id="map-container">
       <div id="map"></div>
+
+      <!-- Legend -->
       <div id="legend">
         <h3>Temperature (°C)</h3>
         <div><span style="background: blue"></span> Low</div>
