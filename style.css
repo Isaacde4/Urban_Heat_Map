@@ -37,42 +37,38 @@ select {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
+/* Legend */
 #legend {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(0,0,0,0.7);
-    padding: 12px 15px;
-    border-radius: 10px;
-    color: white;
-    font-size: 14px;
-    line-height: 1.6;
-    z-index: 1000; /* make sure it stays on top */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 #legend h3 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
-    text-align: center;
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  text-align: center;
 }
 
 #legend div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 #legend div span {
-    display: inline-block;
-    width: 20px;
-    height: 12px;
-    margin-right: 8px;
-    border-radius: 3px;
-    flex-shrink: 0;
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 3px;
+  flex-shrink: 0;
 }
-
-#map-container {
-    position: relative; /* important so legend is positioned inside the container */
-}
-
