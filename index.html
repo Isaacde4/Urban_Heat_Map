@@ -1,54 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Heat Map - Ghana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Heat Map - Isaac Listowell Ataaba</title>
 
-  <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Leaflet Heat plugin -->
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
-  <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Urban Heat Map - Ghana</h1>
-    <p>Select a city to view temperature hotspots.</p>
+    <div class="container">
+        <h1>Urban Heat Map - Isaac Listowell Ataaba</h1>
+        <p>Select a city to view live temperature data:</p>
 
-    <!-- City Selector -->
-    <select id="citySelect">
-      <option value="accra">Accra</option>
-      <option value="kumasi">Kumasi</option>
-      <option value="tema">Tema</option>
-      <option value="takoradi">Takoradi</option>
-      <option value="cape_coast">Cape Coast</option>
-      <option value="tamale">Tamale</option>
-      <option value="bolgatanga">Bolgatanga</option>
-      <option value="sunyani">Sunyani</option>
-      <option value="techiman">Techiman</option>
-      <option value="ho">Ho</option>
-    </select>
+        <select id="citySelect"></select>
 
-    <!-- Map Container -->
-    <div id="map-container">
-      <div id="map"></div>
+        <div id="ghanaMap"></div>
 
-      <!-- Legend -->
-      <div id="legend">
-        <h3>Temperature (°C)</h3>
-        <div><span style="background: blue"></span> Low</div>
-        <div><span style="background: lime"></span> Medium</div>
-        <div><span style="background: orange"></span> High</div>
-        <div><span style="background: red"></span> Very High</div>
-      </div>
+        <div class="legend">
+            <h3>Temperature Legend (°C)</h3>
+            <div><span style="background: blue;"></span> Low</div>
+            <div><span style="background: lime;"></span> Moderate</div>
+            <div><span style="background: orange;"></span> Hot</div>
+            <div><span style="background: red;"></span> Very Hot</div>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
